@@ -8,6 +8,8 @@
 |4  | [What is React Fiber ?](#what-is-react-fiber)|
 |5 | [Why and when do we need keys in React ?](#why-and-when-do-we-need-keys-in-react)|
 |6 | [Can we use indexes as keys in React ?](#can-we-use-indexes-as-keys-in-react)|
+|7 | [How does componentDidMount get executed ?](#how-does-componentdidmount-get-executed) |
+|8 | [What happens when there are multiple children components in the parent class component ?](#what-happens-when-there-are-multiple-children-components-in-the-parent-class-component)|
 
 1. ### What is JSX ?
 - JSX (JavaScript XML) is not HTML inside Javascript. Combination of HTML and JavaScript. 
@@ -43,8 +45,42 @@
 5. ### Why and when do we need keys in React ? 
  - Keys are unique identifier, which are used to identify the which item is inserted, deleted and updated in an array. 
  - Keys should be given to the elements inside the array to give the elements a stable identity. 
- 
+
 6. ### Can we use indexes as keys in React ? 
 - It is not recommended to use indexes as keys in React if the order of the items may change. 
 - This can negatively impact the performance and may cause issues with component state. 
 - If you choose not to assign any explicit key to list items, then React will default to using indexes as keys. 
+
+7. ###  How does componentDidMount get executed ? 
+- First the constructor method of parent class gets executed. 
+- Then the render method of the parent class gets executed. 
+- The render method of the parent class encounters the child class component. So it goes to that component. 
+- Then the constructor method of child class gets executed. 
+- After that the render() method of the child class gets executed. 
+- Then the componentDidMount() of the child class gets executed. 
+- Then it goes to the parent class component and executes the 
+- componentDidMount of the parent class component. 
+- `Constructor (Parent) -> render (Parent) -> Constructor (Child) -> render (Child) -> componentDidMount (Child) -> componentDidMount(Parent)`
+
+8. ###  What happens when there are multiple children components in the parent class component ? 
+- Below is the order of execution. 
+    - Constructor (Parent) 
+    - Render (Parent) 
+    - Constructor (Child 1) 
+    - Render (Child 1) 
+    - Constructor (Child 2) 
+    - Render (Child 2) 
+    - componentDidMount (Child 1) 
+    - componentDidMount (Child 2) 
+    -  componentDidMount (Parent) 
+- There are 2 phases in the React lifecycle 
+    - Render phase 
+    - Commit phase 
+- The constructor method and render method come under the 
+ render phase  while componentDidMount comes under the  commit phase. 
+- In the commit phase, React updates the DOM. 
+- Since updating the DOM is an expensive task, React batches all the constructor methods and render methods of children components and once there is no more child component, then it 
+performs the commit phase. 
+- componentDidMount is used to make an API call inside it.
+
+

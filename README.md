@@ -1,5 +1,10 @@
 # React-Notes
 
+**Notes**
+---------
+-  In class-based components, whenever a component loads, a constructor is called and then the render() method is called.
+-
+
 ### 1. How to make our application compatible with older browsers/specific browsers ?
  - To make our application compatible with older/specific browsers, we can make use of  browserslist. 
  - In the package.json file, we can create a list and give it name as browserslist  and specify all the browsers/specific  versions in the list. 
@@ -93,3 +98,24 @@
 
 ### 8. What is optional chaining ? 
   It is a feature that simplifies the process of accessing properties and methods of nested objects or arrays when intermediate properties may be null or undefined. 
+
+### 9. What is Modularity ?
+  Breakingdown the code into small modules is nothing but Modularity.
+
+### 10. Bundling ?
+- When we are building a large-scaled application, it is important to break it down into different components (Bundles). 
+- Having a single bundle will make our app slower since a single bundle will contain all the code of the application which takes a lot of time to load. 
+- The solution for this is to split our app into smaller chunks (bundles). 
+- This process is known as below terms: 
+    - Chunking 
+    - Code Splitting 
+    - Dynamic Bundling 
+    - Lazy Loading 
+    - On demand loading 
+- For example, 
+    - If we are developing an e-commerce application. This ecommerce app will have a cart which will contain different functionalities. So we can create a separate bundle for the Cart component. 
+    - This bundle will not be loaded initially. It will be loaded only when the user visits the cart page. 
+    - That means, with this approach the app will have 2 bundles. 
+        - One would be a normal bundle which contains all the code of the app except for the cart component. This bundle will be loaded when the user visits our app. 
+        - The other bundle will contain the code of the cart component which will be loaded only when the user visits the shopping cart. 
+ - That is why this process is also known as  on demand  loading  .

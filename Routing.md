@@ -102,3 +102,19 @@
     ```
 - We can extract this  resId  using a hook i.e.,  useParams  from react-router-dom. 
 - Example:  `const { resId } = useParams();`
+
+5. ### What is CreateHashRouter ?
+- CreateHashRouter is part of the React Router library and 
+ provides routing capabilities for single-page applications. 
+- It’s commonly used for building client-side navigation with 
+ applications. 
+- Unlike traditional server side routing, it uses the fragment identifier (hash) in the URL to manage/handle routes on the client side. 
+- This means that changes in the URL after the # symbol do 
+ not trigger a full page reload, making it suitable for single page applications. 
+6. ### What is CreateMemoryRouter ?
+- CreateMemoryRouter is another routing component provided by 
+ React router. 
+- Unlike CreateHashRouter or BrowserRouter, CreateMemoryRouter is not associated with the browser’s URL. 
+- Instead it allows you to create an in-memory router for testing other scenarios where you don’t want to interact with the actual browser’s URL.
+
+7. 
