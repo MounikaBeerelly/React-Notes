@@ -5,7 +5,9 @@
 |1  | [What is JSX ?](#what-is-jsx) |
 |2  | [What is Component Composition ?](#what-is-component-composition) |
 |3  | [Reconciliation in React ?](#reconciliation-in-react)|
-
+|4  | [What is React Fiber ?](#what-is-react-fiber)|
+|5 | [Why and when do we need keys in React ?](#why-and-when-do-we-need-keys-in-react)|
+|6 | [Can we use indexes as keys in React ?](#can-we-use-indexes-as-keys-in-react)|
 
 1. ### What is JSX ?
 - JSX (JavaScript XML) is not HTML inside Javascript. Combination of HTML and JavaScript. 
@@ -34,3 +36,15 @@
     - **Keys**: When working with lists of elements, assigning unique keys helps React identify which elements have been added, removed, or reordered, making the diffing process more efficient.
     - **Pure Components**: Using React.PureComponent or the memo function can help prevent unnecessary re-renders by shallowly comparing props and state.
     - **shouldComponentUpdate**: For advanced use cases, you can use the shouldComponentUpdate lifecycle method to manually control whether a component should re-render.
+
+4. ### What is React Fiber ?
+    React Fiber is a powerful tool for building responsive and renderable user interfaces in React applications. It introduces a new reconciliation algorithm that enables incremental rendering, allowing React to split rendering work into chunks and spread it out over multiple frames.
+
+5. ### Why and when do we need keys in React ? 
+ - Keys are unique identifier, which are used to identify the which item is inserted, deleted and updated in an array. 
+ - Keys should be given to the elements inside the array to give the elements a stable identity. 
+ 
+6. ### Can we use indexes as keys in React ? 
+- It is not recommended to use indexes as keys in React if the order of the items may change. 
+- This can negatively impact the performance and may cause issues with component state. 
+- If you choose not to assign any explicit key to list items, then React will default to using indexes as keys. 

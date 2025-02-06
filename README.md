@@ -42,13 +42,13 @@
     }
     ```
 
-### 4.  Role of type attribute in `script` tag. What options can I use there ? 
+### 4.  Role of type attribute in `<script>` tag. What options can I use there ? 
  - The type attribute specifies the type of the script. 
  - The type attribute identifies the content between the 
-    `script` tags. 
+    `<script>` tags. 
  - It has a default value which is  text/javascript. 
     - text/javascript - It is the basic standard of writing 
- JavaScript code inside the `script` tag. 
+ JavaScript code inside the `<script>` tag. 
 - text/ecmascript - This value indicates that the script is following ECMAScript standards. 
 - module - This value tells the browser that the script is a module that can import or export other files inside. 
 - text/babel - This value indicates that the script is a babel type and requires babel to transpile it. 
@@ -59,4 +59,37 @@
 - Config driven UI is a technique that allows you to create user interfaces based on a configuration file such as JSON, or a typescript file that defines the layout and content of UI components. 
 - This can be useful for creating dynamic and customizable UIs without hard coding them.
 
-### 6. 
+### 6. Fetching data from an API ?
+- There are two approaches. 
+- First Approach 
+    - `Page Loads -> Make API call -> Render UI` 
+    - In this approach, as soon as the page loads, we will 
+ make an API call. 
+    - As soon as we get the API response, we will populate 
+ the data and render the UI. 
+- Second Approach 
+    - Page Loads -> Render UI -> Make API call -> Render 
+    - In this approach, as soon as the page loads, we will 
+ render the skeleton of the UI.
+    - Then we will make an API call. 
+    - Once we get the API response, then we will populate 
+ the data and render the UI. 
+    - In React, we are always going to follow the second 
+ approach.
+- The fetch() global function 
+    - The global fetch() method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available. 
+    - The promise resolves to a response object representing response to your request. 
+    - A fetch() promise only rejects when the API fails.
+    
+    ```
+    const fetchData = async () => {
+        const response = await fetch(API);
+        const data = await response.json();
+        console.log(data);
+    };
+    ```
+### 7. What is Shimmer UI ?
+  When the page loads and the data is being fetched, until the data is displayed on the UI, instead of showing a spinner, we can show the skeleton of the UI. 
+
+### 8. What is optional chaining ? 
+  It is a feature that simplifies the process of accessing properties and methods of nested objects or arrays when intermediate properties may be null or undefined. 
