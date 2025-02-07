@@ -340,4 +340,4 @@ component tree, it is viable to use a store instead of passing props and then li
     - useContext returns the  context value  for the context  you passed. 
     - To determine the context value, React searches the component tree and finds the closest context provider above for that particular context. 
 
-**Note** - It is suggested to use Context in small and mid-size applications. In the large-scale applications, we can make use of  Redux.
+
