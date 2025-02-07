@@ -55,4 +55,29 @@ understand.
 - It is a good practice to use the word  `use`  while naming  the custom hook. 
 - If someone else sees the code, they will get to know that this is not a normal function but a React hook.
 
+6. ### useMemo Hook
+- useMemo is a React hook that lets you cache the result of a calculation between re-renders. 
+- If a component is getting re-rendered again and again whenever a state variable changes or an API is called, then we do not want React to perform all the calculations again. 
+- Using useMemo hook, we can cache the calculations, so that even if the component re-renders, it will not perform that calculation again. 
+- Note: In strict mode, React renders the component twice to make sure that it renders properly. This happens only in the development 
+mode. In production, it will render the component only once. 
+- Consider that we have a toggle button which handles the dark mode of the application. The value of the mode is saved in a state variable. Whenever the button is clicked, this state variable will change. 
+- This causes re-rendering of the component every time the button is clicked. 
+- Suppose we have a calculation in the same component which is not related to the dark mode feature. But whenever the button is clicked, the calculation is performed again. 
+- If the calculation is a heavy operation, then it will cause the performance issues. 
+- The useMemo hook memoize  the calculation result. 
+- useMemo() hook takes 2 arguments: 
+    - A callback function 
+    - A dependency array 
+- Callback function performs the calculation. 
+- And useMemo hook performs the operation only when there is a change in the dependency array. 
+- So even if all the state variables are changed in the component, but there is not change in the dependency array, then the calculation will not be performed again. 
 
+7. ### useCallback Hook 
+- useCallback is a React hook that  lets you cache a function definition between re-renders. 
+- useCallback is quite similar to useMemo. In useMemo, we cache the result returned by a function but in useCallback, we cache the function itself. 
+- useCallback alse gets executed only when there is a change in the dependency array. 
+ 
+8. ### useRef hook
+- useRef is a React hook that  lets you reference a value that’s not needed for rendering. 
+- When there is a case,  where you want to keep some data in your component which you do not want to re-render, then we use the useRef hook. 
