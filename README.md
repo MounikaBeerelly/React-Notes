@@ -3,7 +3,7 @@
 **Notes**
 ---------
 -  In class-based components, whenever a component loads, a constructor is called and then the render() method is called.
--
+- It is suggested to use Context in small and mid-size applications. In the large-scale applications, we can make use of  Redux.
 
 ### 1. How to make our application compatible with older browsers/specific browsers ?
  - To make our application compatible with older/specific browsers, we can make use of  browserslist. 
