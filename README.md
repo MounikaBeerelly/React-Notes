@@ -10,6 +10,7 @@
  - In the package.json file, we can create a list and give it name as browserslist  and specify all the browsers/specific  versions in the list. 
  - Browserslist is a package stored in node modules and parcel uses that to make the app compatible. 
  - Refer to  `https://browserslist.dev`
+
     ```
     "browserslist": {
     "production": [
@@ -118,4 +119,4 @@
     - That means, with this approach the app will have 2 bundles. 
         - One would be a normal bundle which contains all the code of the app except for the cart component. This bundle will be loaded when the user visits our app. 
         - The other bundle will contain the code of the cart component which will be loaded only when the user visits the shopping cart. 
- - That is why this process is also known as  on demand  loading  .
+ - That is why this process is also known as  on demand  loading.

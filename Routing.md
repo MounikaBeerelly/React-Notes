@@ -116,5 +116,3 @@
  React router. 
 - Unlike CreateHashRouter or BrowserRouter, CreateMemoryRouter is not associated with the browser’s URL. 
 - Instead it allows you to create an in-memory router for testing other scenarios where you don’t want to interact with the actual browser’s URL.
-
-7. 

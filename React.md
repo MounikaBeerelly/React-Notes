@@ -13,7 +13,10 @@
 |9 | [When and why do we need lazy loading ?](#when-and-why-do-we-need-lazy-loading)|
 |10 | [When and why do we need Suspense ?](#when-and-why-do-we-need-suspense)|
 |11 | [Higher Order Components ?](#higher-order-components)|
-
+|12 | [What are Controlled and Uncontrolled Components ?](#what-are-controlled-and-uncontrolled-components)|
+|13 | [ Lifting the state up ?](#lifting-the-state-up)|
+|14 | [What is Prop Drilling ?](#what-is-prop-drilling)|
+|15 | [What is React Context ?](#what-is-react-context)|
 1. ### What is JSX ?
 - JSX (JavaScript XML) is not HTML inside Javascript. Combination of HTML and JavaScript. 
 - JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. 

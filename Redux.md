@@ -162,15 +162,14 @@
 - The dispatch() function takes an argument i.e. addItem action. 
 - The addItem action has a reducer function which takes one argument i.e. payload (apple). 
 - When an action is dispatched, an object is created. This object has a key i.e. payload and it will have the value which is passed to the reducer function i.e. apple.
-- ```
- { 
-     Payload: “apple”, 
- } 
- ```
+    ```
+    { 
+        Payload: “apple”, 
+    } 
+    ```
 - The **handleAddItem** will be responsible for dispatching the action and it is assigned to the click event of the button. So whenever the user clicks the button, the addItem action will be dispatched and it will add that item to the cart. 
 
-5. ### onClick={handleAddItem} vs onClick={() => handleAddItem(item)} vs 
-onClick={handleAddItem(item)} ?
+5. ### onClick={handleAddItem} vs onClick={() => handleAddItem(item)} vs onClick={handleAddItem(item)} ?
 - **onClick={handleAddItem}**
     - This syntax assigns the handleAddItem function directly to the onClick event. 
     - When the button is clicked, the handleAddItem function will be called without any arguments. 
