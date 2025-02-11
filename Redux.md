@@ -48,7 +48,7 @@
 
     export default appStore;
     ```
-- Providin store to the application
+- Providing store to the application
     ```
     import { Provider } from "react-redux";
     import appStore from "./appStore";
