@@ -91,7 +91,7 @@
     - Reducers 
 - The initialState is the state which a slice has in the beginning before it gets modified. 
 - Reducers have actions and these actions have callback functions.
-- **addItem88 is a reducer function which is called as an action. 
+- **addItem** is a reducer function which is called as an action. 
 - The function which is assigned to it is responsible for modifying or updating the cartSlice. 
 - We have exported the reducer as a default export. 
 - We have also exported the actions from the slice. 
@@ -132,7 +132,7 @@
 - This useSelector gives us access to the store where we can find the **cart.items**. 
 - The items of the cart will be stored in  cartItems  which we can use in our component. 
 - **Note** - Make sure to access a particular state variable. In our case, we have accessed cart.items which gives us the exact value of items. 
-- If we subscribe only to **store.cart**, sometimes this **store.cart** may contain state variables other than  items. 
+- If we subscribe only to **store.cart**, sometimes this **store.cart** may contain state variables other than items. 
 - If there is a change in any of those state variables, then it will re-render the cart component as well. 
 - So subscribing only to store.cart.items  will make the Cart component re-render only when there is a change in the items.
 - **Dispatch an action**
