@@ -7,7 +7,6 @@
 - When we build large-scale applications where we have to manage the state of a lot of components and the application has a number of features, then we can use Redux. 
 - In small-scale or mid-scale applications, we can still manage the state without using Redux. 
 - Redux is not part of React. They both are different libraries. 
-- All the applications built using Redux can also be built without using it. 
 - Redux is not the only library for state management. There is also another library named `Zustand`. 
 - Just like we have React Dev Tools, we also have Redux Dev Tools which help us to debug our application when we use Redux. 
 - There are 2 libraries that Redux team offers: 
